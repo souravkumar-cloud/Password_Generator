@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(44, 5, 81);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+h1{
+    font: bold;
+    color: white;
+    text-transform: uppercase;
+    opacity: 0.75;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 22px;
+}
+.display-container{
+    position: relative;
+    background-color: rgb(17, 1, 31);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(121, 9, 225);
+    margin: 1rem 0;
+    padding-top:0.35rem;
+}
+
+.display{
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: rgb(191, 255, 0);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1rem;
+    color: rgb(191, 255, 0);
+    line-height: 30px;
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    color: rgb(153, 173, 0);
+    
+}
+.input-container{
+    width: 100%;
+    position:relative;
+    background-color: rgb(17, 1, 31);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid rgb(121, 9, 225);
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+.length-container{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+    color: azure;
+    /* padding-top: 15px; */
+    font-weight:400;
+    letter-spacing: 1px;
+    line-height: 10px;
+    font-size: larger;
+}
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+}
+.length-container P:nth-child(2){
+    color: yellow;
+
+}
+.input-container label{
+    color: azure;
+    font-weight: 600;
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.input-container button{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(191, 255, 0);
+    background-color: rgb(175, 9, 225);
+    color: rgb(191, 255, 0);
+    font-weight: 600;
+    font: bold;
+    letter-spacing: 1px;
+    font-size: large;
+}
+
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50% ;
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    columns: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-50%) ;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: rgb(44, 5, 81);
+    border-radius: 1rem;
+    margin: 2rem 0 0 0 ;
+    background-color: rgb(175, 9, 225);
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid yellow;
+}
+.slider::-webkit-slider-thumb:hover{
+    background-color: black;
+    outline: 2px solid yellow;
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+.copybtn{
+    background-color: transparent;
+    border: none;
+}
